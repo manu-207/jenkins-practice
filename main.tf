@@ -2,12 +2,13 @@ provider "aws" {
   region = "us-east-1" # Set your desired AWS region
 }
 
-resource "aws_vpc" "example" {
-  cidr_block = "10.0.0.0/16" # Adjust the CIDR block as needed
-  enable_dns_support = true
-  enable_dns_hostnames = true
+resource "aws_instance" "example" {
+  ami           = "ami-051f7e7f6c2f40dc1" # Use the desired AMI ID
+  instance_type = "t2.micro"              # Specify the instance type
+  key_name      = "autoscaling-key"    # Replace with your SSH key pair name
 
   tags = {
-    Name = "my-vpc"
+    Name = "my7-ec2-instance"
   }
 }
+
