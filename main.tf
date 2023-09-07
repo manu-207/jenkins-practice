@@ -8,7 +8,7 @@ resource "aws_instance" "example" {
   key_name      = "autoscaling-key"    # Replace with your SSH key pair name
 
   tags = {
-    Name = "my7-ec2-instance"
+    Name = "demo5748-ec2-instance"
   }
 }
 
